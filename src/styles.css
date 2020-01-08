@@ -1,20 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: RomanAllPetiteCaps;
+    src: url("./assets/MrsEavesOT-RomanAllPetiteCaps.otf") format("opentype");
+}
+body{
+    background-image: url("./assets/RSVP_Background.png");
+    background-position-y: -300px;
+}
 h1{
     font-size: 50px;
+    font-family: RomanAllPetiteCaps;
+    text-align: center;
 }
-#wedding-banner{
-    background-color: pink;
+#location{
+    background-color: white;
+}
+
+#location-underline{
+    border: solid;
+    border-color: #F7CFD8;
+    width: 400px;
+    border-width: 4px;
+}
+#details{
+    background-color: #F7CFD8;
+}
+#details-underline{
+    border: solid;
+    border-color: white;
+    width: 400px;
+    border-width: 4px;
 }
 #rsvp{
     border-style: solid;
 }
 #rsvp-label{
     text-align: center;
-    background-color: pink;
+    background-color: #ffc2b6;
 }
 #rsvp-form{
     padding-left: 6px;
 }
 #disclaimer{
     text-align: center;
+}
+.navbar-custom {
+    background-color: white;
+    min-height: 100px;
+    border-bottom-style: solid;
+    border-color: #F7CFD8;
+    border-width: 8px;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: black;
+    font-family: RomanAllPetiteCaps;
+    font-size: 30pt;
+    padding-left:34px;
+    padding-right:34px;
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #F7CFD8;
 }
