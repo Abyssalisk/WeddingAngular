@@ -3,6 +3,23 @@
     font-family: RomanAllPetiteCaps;
     src: url("./assets/MrsEavesOT-RomanAllPetiteCaps.otf") format("opentype");
 }
+@media screen and (max-width: 720px) {
+    img {
+         max-width: 300px;
+    }
+    #pink-button{
+        width: 300px
+    }
+    #registry-underline{
+        width: 300px;
+    }
+    #pink-button{
+        width: 300px;
+    }
+    .form-control{
+        width: 25px;
+    }
+}
 body{
     background-image: url("./assets/RSVP_Background.png");
     background-position-y: -300px;
@@ -11,6 +28,26 @@ h1{
     font-size: 50px;
     font-family: RomanAllPetiteCaps;
     text-align: center;
+}
+#pink-text{
+    font-size: 50px;
+    font-family: RomanAllPetiteCaps;
+    text-align: center;
+    color: #F7CFD8;
+}
+#pink-button{
+  background-color: #F7CFD8;
+  border: none;
+  color: black;
+  padding: 15px 25px;
+  font-size: 50px;
+  font-family: RomanAllPetiteCaps;
+  text-align: center;
+  cursor: pointer;
+  width: 500px;
+}
+#pink-button:hover{
+    background-color: rgb(247, 183, 197);
 }
 #location{
     background-color: white;
@@ -32,17 +69,41 @@ h1{
     border-width: 4px;
 }
 #rsvp{
-    border-style: solid;
+    background-color: white;
+    border: solid;
+    border-color: #F7CFD8;
+    border-width: 50px;
 }
 #rsvp-label{
     text-align: center;
     background-color: #ffc2b6;
 }
-#rsvp-form{
-    padding-left: 6px;
+input[type="text"],
+select.form-control {
+  font-family: RomanAllPetiteCaps;
+  font-size: 25pt;
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid #000000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  width: 100%;
+}
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom: 4px solid #F7CFD8;
 }
 #disclaimer{
     text-align: center;
+}
+#registry-underline{
+    border: solid;
+    border-color: #F7CFD8;
+    width: 1000pt;
+    border-width: 4px;
 }
 .navbar-custom {
     background-color: white;
