@@ -1,4 +1,5 @@
 <div class="container" id="rsvp">
+  <form (ngSubmit)="onSubmit()">
   <br><br>
   <div class="row">
     <img class="mx-auto d-block" src="./assets/Rsvp.png"  width="200" id="location-image">
@@ -8,7 +9,9 @@
         <h1>FIRST NAME</h1>
       </div>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="rsvp-form">
+        <input type="text" class="form-control" id="rsvp-form"
+          placeholder="Enter your first name..."
+          required [(ngModel)]="firstValue" name="firstName">
       </div>
     </div><br>
     <div class="row">
@@ -16,13 +19,26 @@
           <h1>LAST NAME</h1>
         </div>
         <div class="col-sm-8">
-          <input type="text" class="form-control" id="rsvp-form">
+          <input type="text" class="form-control" id="rsvp-form"
+          placeholder="Enter your last name..."
+          required [(ngModel)]="lastValue" name="lastName">
         </div>
       </div><br><br><br>
       <div class="row">
-        <button class="mx-auto d-block" id="pink-button">SUBMIT</button>
+        <button type="submit" class="mx-auto d-block" id="pink-button">SUBMIT</button>
     </div><br><br><br>
+  </form>
     <div class="row">
       <h1 class="mx-auto d-block">PLEASE RSVP EVERY INDIVIDUAL<br>GUEST THAT WILL BE ATTENDING</h1>
+      <!-- <p *ngFor="let guest of guests | async">{{guest.content}}</p> To be added later for reporting -->
     </div><br><br><br>
-  </div><br><br><br><br><br><br>
+    <div class="modal" id="formModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="mx-auto d-block">{{modalMessage}}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+</div><br><br><br><br><br><br>
