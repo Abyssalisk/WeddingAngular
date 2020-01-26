@@ -4,11 +4,8 @@
     src: url("./assets/MrsEavesOT-RomanAllPetiteCaps.otf") format("opentype");
 }
 @media screen and (max-width: 720px) {
-    img {
-         max-width: 300px;
-    }
     #pink-button{
-        width: 300px
+        width: 300px;
     }
     #registry-underline{
         width: 300px;
@@ -28,6 +25,7 @@ h1{
     font-size: 50px;
     font-family: RomanAllPetiteCaps;
     text-align: center;
+    line-height: 75%;
 }
 #pink-text{
     font-size: 50px;
@@ -39,10 +37,9 @@ h1{
   background-color: #F7CFD8;
   border: none;
   color: black;
-  padding: 15px 25px;
+  padding: 15px 0px 20px;
   font-size: 50px;
   font-family: RomanAllPetiteCaps;
-  text-align: center;
   cursor: pointer;
   width: 500px;
 }
@@ -52,12 +49,26 @@ h1{
 #location{
     background-color: white;
 }
-
 #location-underline{
     border: solid;
     border-color: #F7CFD8;
     width: 400px;
     border-width: 4px;
+}
+.outer-wrapper {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.map-wrapper {
+    height: 500px;
+}
+agm-map {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 #details{
     background-color: #F7CFD8;
@@ -96,6 +107,9 @@ select.form-control:focus {
   box-shadow: none;
   border-bottom: 4px solid #F7CFD8;
 }
+.form-control {
+    padding: 25px 0 0 0;
+}
 #disclaimer{
     text-align: center;
 }
@@ -104,6 +118,13 @@ select.form-control:focus {
     border-color: #F7CFD8;
     width: 1000pt;
     border-width: 4px;
+}
+#bridesmaids-image
+{
+    padding-top: 75px;
+}
+#groomsmen-image{
+    padding-top: 75px;
 }
 .navbar-custom {
     background-color: white;
@@ -119,10 +140,11 @@ select.form-control:focus {
     font-size: 30pt;
     padding-left:34px;
     padding-right:34px;
+    text-align: center;
 }
-
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
     color: #F7CFD8;
 }
+

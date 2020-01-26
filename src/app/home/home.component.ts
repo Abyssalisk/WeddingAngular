@@ -6,9 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  latitude = 40.552780;
+  longitude = -111.901225;
+  markers = [{ lat: 40.552780, lng: -111.901225, alpha: 1 }];
 
-  constructor() { }
-
+  addMarker(lat: number, lng: number) {
+    this.markers.push({ lat, lng, alpha: 0.4 });
+  }
+  
   ngOnInit() {
   }
 

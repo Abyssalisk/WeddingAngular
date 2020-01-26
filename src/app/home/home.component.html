@@ -11,7 +11,28 @@
     <h1 class="mx-auto d-block">NOAH'S EVENT CENTER<br/>322 WEST 11000 SOUTH<br/>SOUTH JORDAN &#183; UTAH</h1>
   </div><br><br><br>
   <div class="row">
-    <h1 class="mx-auto d-block">THIS WILL BE AN INTERACTIVE MAP</h1>
+    <div class="d-none d-lg-block col-sm"></div>
+    <div class="col-sm">
+      <div class="outer-wrapper mx-auto d-block">
+        <div class="map-wrapper" id="wrapper" #wrapper>
+          <agm-map
+          [latitude]="latitude"
+          [longitude]="longitude"
+          [zoom]="14.5"
+          >
+            <agm-marker
+            *ngFor="let marker of markers"
+            [latitude]="marker.lat"
+            [longitude]="marker.lng"
+            [opacity]="marker.alpha"
+            [markerDraggable]="false"
+            >
+            </agm-marker>
+          </agm-map>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-sm"></div>
   </div><br><br><br><Br>
 </div>
 <div class="container-fluid" id ="details">

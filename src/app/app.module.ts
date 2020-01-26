@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { RegistryComponent } from './registry/registry.component';
 import { WeddingPartyComponent } from './wedding-party/wedding-party.component';
 
+import { AgmCoreModule } from '@agm/core';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,10 @@ import { WeddingPartyComponent } from './wedding-party/wedding-party.component';
     FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDzzf_-VWjlR2IbCLk_XTXIM2Ksx9B-tyQ'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
