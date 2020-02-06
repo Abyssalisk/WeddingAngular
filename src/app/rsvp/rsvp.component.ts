@@ -44,7 +44,7 @@ export class RsvpComponent implements OnInit {
       else
       {
         this.modalMessage = "No numbers or special characters."
-      $("#formModal").modal('show');
+        $("#formModal").modal('show');
       }
     }
     else 

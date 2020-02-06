@@ -14,6 +14,11 @@
                     FATIMA ELIZONDO<br><span id="pink-text">MAID OF HONOR</span><br>ALEXA HERNANDEZ<br>ISABELLA HERNANDEZ
                     <br>SUSANA HERNANDEZ<br>CHAREI MACE<br>CAELEI MCKAY<br>CIERSTEI ROSENVALL<br>MELISSA TORRES
                 </h1>
+            </div><br>
+            <div class="row">
+                <button class="mx-auto d-block" id="pink-button" 
+                (click)="bridesmaidsClicked()"
+                >BRIDESMAIDS OUTFIT</button>
             </div>
         </div>
         <div class="col-sm">
@@ -26,11 +31,33 @@
             <div class="row">
                 <h1 class="mx-auto d-block">GAVIN ROSENVALL<br><span id="pink-text">BEST MAN</span><br>
                 CAMERON WOOLLEY<br><span id="pink-text">BEST MAN</span><br>DUSTIN HAMP<br>BRADEN LATIMER
-                <br>TREVYN MACE<br>TRISTAN MCKAY<br>RYAN SHURTZ<br>EMMIT VASQUEZ
+                <br>TREVYN MACE<br>TRISTAN MCKAY<br>KEATON MEHR<br>RYAN SHURTZ<br>EMMIT VASQUEZ
                 </h1>
+            </div><br>
+            <div class="row">
+                <button class="mx-auto d-block" id="pink-button" 
+                (click)="groomsmenClicked()"
+                >GROOMSMEN OUTFIT</button>
             </div>
         </div>
         <div class="d-none d-lg-block col-sm-2"></div>
     </div>
     <br><br><br><br>
+    <div class="modal" id="formModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="mx-auto d-block">{{modalTitle}}</h1>
+            </div>
+            <div class="modal-body" *ngFor="let link of array">
+                <h1 class="mx-auto d-block" style="font-size: 24pt;">{{link.title}}: 
+                    <a style="overflow-wrap: break-word;" href={{link.url}} target="_blank">{{link.url}}</a>
+                </h1>  
+            </div>
+            <div class="modal-footer">
+                <h1 class="mx-auto d-block">{{modalMessage}}</h1>
+            </div>
+          </div>
+        </div>
+    </div>
 </div>

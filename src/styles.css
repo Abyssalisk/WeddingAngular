@@ -110,6 +110,9 @@ select.form-control:focus {
 .form-control {
     padding: 25px 0 0 0;
 }
+.modal-open {
+    padding-right: 0px;
+}
 #disclaimer{
     text-align: center;
 }
